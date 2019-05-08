@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定</title>
+
+    <script>
+
+
+        function onTextChanged() {
+            var userInput = document.getElementById("user");
+            var showInput = document.getElementById("show");
+
+            showInput.value = userInput.value;
+        }
+
+        function setText() {
+            var showInput = document.getElementById("show");
+            showInput.value = "123";
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+
+
+<span>服务端数据: <input id="user" onkeyup="onTextChanged()" type="text" value=""></span>
+<span>客户端数据: <input id="show" type="text" text=""></span>
+
+<button onclick="setText()">设置内容</button>
+
+
+
+
+</body>
+</html>
